@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(ellipse at bottom, #0b0e1f 0%, #000 100%);
+  color: white;
+  overflow: hidden;
+}
+
+/* Subtle floating */
+.planet-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+/* Twinkle animations for stars */
+@keyframes twinkle-slow   { 0%,100% { opacity:0.10; } 50% { opacity:0.25; } }
+@keyframes twinkle-medium { 0%,100% { opacity:0.20; } 50% { opacity:0.45; } }
+@keyframes twinkle-fast   { 0%,100% { opacity:0.15; } 50% { opacity:0.40; } }
+
+.animate-twinkle-slow   { animation: twinkle-slow   28s infinite ease-in-out; }
+.animate-twinkle-medium { animation: twinkle-medium 18s infinite ease-in-out; }
+.animate-twinkle-fast   { animation: twinkle-fast   11s infinite ease-in-out; }
